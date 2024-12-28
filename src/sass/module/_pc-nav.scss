@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.pc-nav {
+}
+
+.pc-nav__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(40);
+}
+.pc-nav__item {
+  text-align: center;
+}
+
+.pc-nav__item a {
+  color: #fff;
+  font-family: $english-family;
+  font-size: rem(18);
+  line-height: 1.8;
+  transition: color 0.3s;
+}
+
+.pc-nav__item a span {
+  margin-top: rem(-2);
+  display: block;
+  color: #fff;
+  font-family: $base-font-family;
+  font-size: rem(10);
+  line-height: 1.5;
+}
+
+.pc-nav__item a:hover {
+  color: #f5810e;
+}

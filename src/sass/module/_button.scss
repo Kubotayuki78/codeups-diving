@@ -1,0 +1,147 @@
+@use "global" as *;
+.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 202px;
+  padding: rem(16) rem(40);
+  background-color: $accent-color;
+  font-family: $english-family;
+  font-size: rem(14);
+  color: $white;
+  border: 1px solid $accent-color;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  background-color: $white;
+  transition: 0.5s;
+}
+
+.button::before {
+  top: calc(50% - 2px);
+  right: rem(40);
+  transform: translateY(calc(-50% - 1px)) rotate(37deg);
+  width: rem(10);
+  height: rem(1);
+}
+
+.button::after {
+  top: 50%;
+  right: rem(40);
+  transform: translateY(-50%);
+  width: rem(40);
+  height: rem(1);
+}
+
+.button span::before {
+  content: "";
+  position: absolute;
+  border: 1px solid $accent-color;
+  top: rem(4);
+  left: rem(5);
+  bottom: rem(-4);
+  right: rem(-5);
+  z-index: -1;
+}
+
+.button:hover {
+  background: $white;
+  color: $accent-color;
+}
+
+.button:hover::before,
+.button:hover::after {
+  background: $accent-color;
+}
+
+.c-btn,
+.c-bnr,
+.c-txt {
+  cursor: pointer;
+}
+
+// ボタン基本コード
+.btn {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 202px;
+  padding: rem(16) rem(40);
+  background-color: $accent-color;
+  font-family: $english-family;
+  font-size: rem(14);
+  color: $white;
+  border: 1px solid $accent-color;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.btn::after {
+  background: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: $accent-color;
+}
+
+.btn:hover::after {
+  transform: scale(1, 1);
+}
+
+.btn span::before,
+.btn span::after {
+  content: "";
+  position: absolute;
+  background-color: $white;
+  transition: 0.5s;
+}
+
+.btn span::before {
+  top: calc(50% - 2px);
+  right: rem(40);
+  transform: translateY(calc(-50% - 1px)) rotate(37deg);
+  width: rem(10);
+  height: rem(1);
+}
+
+.btn span::after {
+  top: 50%;
+  right: rem(40);
+  transform: translateY(-50%);
+  width: rem(40);
+  height: rem(1);
+}
+
+.btn:hover span::before,
+.btn:hover span::after {
+  background-color: $accent-color;
+}
+
+.btn .btn-shadow {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 120px;
+  height: 50px;
+  border: 1px solid pink;
+  background-color: transparent;
+  border-radius: 5px;
+}

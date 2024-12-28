@@ -1,0 +1,63 @@
+@use "global" as *;
+.fv {
+  position: relative;
+}
+
+.fv__image {
+  aspect-ratio: 375 / 667; // 幅 / 高さ
+  overflow: hidden;
+
+  @include mq("md") {
+    aspect-ratio: 1440 / 768;
+  }
+}
+
+.fv__img picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fv__inner {
+  padding: 0 rem(30);
+}
+
+.fv__heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+
+  @include mq("md") {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+
+.fv__title {
+  font-family: "lato", sans-serif;
+  font-size: rem(40);
+  font-weight: 400;
+  letter-spacing: 21.6px;
+  text-align: center;
+
+  @include mq("md") {
+    font-size: rem(80);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 43.2px;
+  }
+}
+
+.fv__subtitle {
+  font-family: $english-family;
+  font-size: 20px;
+  text-align: center;
+
+  @include mq("md") {
+    text-align: center;
+    font-size: rem(24);
+  }
+}
