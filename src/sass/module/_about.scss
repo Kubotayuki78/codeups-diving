@@ -2,9 +2,11 @@
 
 .about {
   margin-top: rem(80);
+  padding-bottom: rem(70);
 
   @include mq("md") {
     padding-bottom: rem(164);
+    overflow: hidden;
   }
 }
 

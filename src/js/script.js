@@ -65,19 +65,26 @@ jQuery(function ($) {
       let target = $(this.hash);
       if (!target.length) return;
       let targetY = target.offset().top - header;
-      $("html,body").animate({ scrollTop: targetY }, time, "swing");
+      $("html,body").animate({ sscrollTop: targetY }, time, "swing");
       return false;
     });
 
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-      },
+    var swiper = new Swiper(".fvSwiper", {
       loop: true,
-      clickable: true,
+      // clickable: true,
       // autoplay: {
       //   delay: 3000,
       // },
+    });
+
+    var swiper = new Swiper(".cardSwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 40,
+      loop:true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     });
   });
 });

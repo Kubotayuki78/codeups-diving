@@ -51,7 +51,7 @@
   }
 }
 
-.info__title {
+.info__body-title {
   font-size: rem(20);
   font-weight: 700;
   line-height: 1.2;
@@ -63,7 +63,7 @@
   }
 }
 
-.info__title::after {
+.info__body-title::after {
   background-color: #408f95;
   bottom: rem(-4);
   content: "";
@@ -78,7 +78,7 @@
   }
 }
 
-.info__text {
+.info__body-text {
   margin-top: rem(12);
   line-height: 1.5;
 
